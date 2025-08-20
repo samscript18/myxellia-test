@@ -73,7 +73,7 @@ export default function Calendar({ onClose, onDateSelect }: CalendarProps) {
 						setSelectedDay(day);
 					}}
 					key={`prev-${day}`}
-					className="border-[0.47px] border-[#242424] pl-2 text-start pb-14 w-[50px] h-[90px] text-[#969696] hover:bg-[#98A2B3]/20 transition-colors text-[9.94px]">
+					className="border-[0.47px] border-[#242424] pl-2 text-start pb-14 w-[50px] h-[90px] text-[#969696] hover:bg-[#98A2B3]/20 transition-colors text-[9.94px] cursor-pointer">
 					{day}
 				</td>
 			);
@@ -85,7 +85,7 @@ export default function Calendar({ onClose, onDateSelect }: CalendarProps) {
 				<td
 					key={day}
 					onClick={() => handleDateClick(day)}
-					className={`w-[50px] h-[90px] transition-colors text-[9.94px] font-medium border-[0.47px] border-[#242424] pl-2 text-start pb-14 ${
+					className={`w-[50px] h-[90px] transition-colors text-[9.94px] font-medium border-[0.47px] border-[#242424] pl-2 text-start pb-14 cursor-pointer ${
 						isSelected ? 'bg-[#2525E6] text-white' : 'text-white hover:bg-[#98A2B3]/20'
 					}`}>
 					{day}
@@ -107,7 +107,7 @@ export default function Calendar({ onClose, onDateSelect }: CalendarProps) {
 						setSelectedDay(nextMonthDay);
 					}}
 					key={`next-${nextMonthDay}`}
-					className="border-[0.47px] border-[#242424] pl-2 text-start pb-14 w-[50px] h-[90px] text-[#969696] hover:bg-[#98A2B3]/20 transition-colors text-[9.94px]">
+					className="border-[0.47px] border-[#242424] pl-2 text-start pb-14 w-[50px] h-[90px] text-[#969696] hover:bg-[#98A2B3]/20 transition-colors text-[9.94px] cursor-pointer">
 					{nextMonthDay}
 				</td>
 			);
