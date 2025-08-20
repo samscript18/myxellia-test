@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { X, ArrowLeft } from 'lucide-react';
 import ModalWrapper from '@/component/animations/modal-wrapper';
 import { FaCaretLeft, FaCaretRight } from 'react-icons/fa6';
+import { dayNames, monthNames } from '@/lib/data/data';
 
 interface CalendarProps {
 	onClose?: () => void;
@@ -14,23 +15,6 @@ interface CalendarProps {
 export default function Calendar({ onClose, onDateSelect }: CalendarProps) {
 	const [currentDate, setCurrentDate] = useState(new Date());
 	const [selectedDay, setSelectedDay] = useState<number>(new Date().getDate());
-
-	const monthNames = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December',
-	];
-
-	const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT'];
 
 	const getDaysInMonth = (date: Date) => {
 		return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
